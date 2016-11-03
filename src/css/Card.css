@@ -1,0 +1,26 @@
+.card{
+	float:left;
+	background:##fff;
+	padding:20px;
+	border-radius: 5px;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
+	transition: 0.2s ease-in;
+	will-change: transform, box-shadow;
+	animation: showCard 0.2s ease-in;
+}
+
+.card:hover{
+	transform: translateY(-3px);
+	box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
+}
+
+
+@keyframes showCard {
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
