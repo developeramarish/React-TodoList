@@ -41,6 +41,12 @@ class TodoGrid extends Component{
 			});
 	}
 
+	AddTodo(dados){
+		this.setState({
+			todos: this.state.todos.concat(dados)
+		})
+	}
+
 	render(){
 		return(
 			<div>	
@@ -48,7 +54,7 @@ class TodoGrid extends Component{
 				onSearch={this.handleSearch.bind(this)}
 				texto="Procurando nemo onde ele está? "/>
 	        	{this.renderCards()}
-	        	<AddTodo/>
+	        	<AddTodo addTodo={this.AddTodo.bind(this)}/>
         	</div>
 		);
 	}
